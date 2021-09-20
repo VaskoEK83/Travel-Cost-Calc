@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utazás</title>
+    <!-- css reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <!-- html + css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- html + js -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main>
+        <h1>Utazási kalkulátor</h1>
+
+        <h2>Utazási költség számítása:</h2>
+
+        <form id="form">
+            <table>
+                <tr>
+                    <td><label>Megtett távolság:</label></td>
+                    <td><input type="number" name="Distance" value="0" min="0" required class="bigger_input" data-validation="default"> km</td>
+                </tr>
+                <tr>
+                    <td><label>Átlagos fogyasztás:</label></td>
+                    <td><input type="number" name="Consumption" value="0" min="0" required class="bigger_input" data-validation="default"> l/100km</td>
+                </tr>
+                <tr>
+                    <td><label>Üzemanyag ára:</label></td>
+                    <td><input type="number" name="Price" value="0" min="0" required class="bigger_input" data-validation="default"> Ft/liter</td>
+                </tr>
+            </table>
+        </form>
+
+        <button id="calcButton">SZÁMÍTÁS</button><br><br>
+
+        <label id="finalCostLabel"></label>
+        
+        <h2>Becsült utazási idő számítása:</h2>
+
+        <form id="form2">
+            <table>
+                <tr>
+                    <td><label>Megtett távolság:</label></td>
+                    <td><input type="number" name="Distance2" value="0" min="0" required class="bigger_input" data-validation="default"> km</td>
+                </tr>
+                <tr>
+                    <td><label>Tervezett átlagsebesség:</label></td>
+                    <td><input type="number" name="Velocity" value="0" min="0" class="bigger_input" data-validation="default"> km/óra</td>
+                </tr>
+                <tr>
+                    <td><label>Pihenőidő:</label></td>
+                    <td><input type="number" name="Minute" value="0" min="0" class="smaller_input"> perc <input type="number" name="Occasion" value="0" min="0" class="smaller_input"> alk.-mal</td>
+                </tr>
+            </table>
+        </form>
+
+        <button id="calcButton2">SZÁMÍTÁS</button><br><br>
+
+        <label id="finalCostLabel2"></label><br><br>
+
+        <label>Az utazás időtartama: </label>
+        <input type="number" id="finalTimeLabel_hour" class="smaller_input"> óra
+        <input type="number" id="finalTimeLabel_minute" class="smaller_input"> perc
+    </main>
+</body>
+</html>

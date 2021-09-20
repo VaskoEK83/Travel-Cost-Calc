@@ -1,0 +1,144 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('assets/karsten-wurth-rafblRbne3o-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:not(h1) {
+    font-size: 2vh;
+}
+
+main {
+    width: 85vw;
+    background-color: #FFFFFF;
+    opacity: .8;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 2.5vh;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 600;
+    padding: 1rem 0;
+}
+
+button {
+    background: linear-gradient(
+        180deg, 
+        rgb(220, 220, 220) 0%, 
+        rgb(116, 178, 197) 20%, 
+        rgb(73, 114, 126) 80%, 
+        rgb(41, 59, 66) 100%
+    );
+    padding: .7rem .7rem .5rem .7rem;
+    border-radius:10px;
+    box-shadow: .3rem .3rem .5rem rgba(0, 0, 0, .5);
+    color: #FFFFFF;
+    width: 85vw;
+    transition: transform .5s linear 0s;
+}
+
+button:hover {
+    transform: scale(1.04);
+}
+
+button:active {
+    background: linear-gradient(
+        180deg,
+        rgb(73, 114, 126) 0%,
+        rgb(73, 114, 126) 100%
+    );
+    border: none;
+}
+
+/* Style of table */
+
+table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+} 
+
+table, td {
+    border: 1px solid black;
+}
+
+tr:nth-child(odd) {
+    background: rgba(205,207,224,1);
+}
+
+td {
+    padding: .4rem;
+    line-height: 1.3rem;
+}
+
+
+/* Style of input elements */
+
+.bigger_input {
+    width: 55px;
+    border-radius: .3rem;
+}
+
+.bigger_input[data-validation="invalid"] {
+    background: red;
+    color: white;
+}
+
+.smaller_input {
+    width: 35px;
+    border-radius: .3rem;
+}
+
+
+/* Style of result input elements */
+
+#finalTimeLabel_hour, #finalTimeLabel_minute {
+    width: 50px;
+    background-color: rgb(182, 182, 212);
+    border: none;
+}
+
+
+/* Modifiers */
+        
+@media only screen and (min-width: 768px) {
+    main {
+        max-width: 65vw;
+    }
+    button {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    main {
+        max-width: 55vw;
+    }
+    button {
+        width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    main {
+        max-width: 30vw;
+    }
+}
